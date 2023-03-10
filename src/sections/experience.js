@@ -17,10 +17,10 @@ const Experience = () => {
 
   return (
     <Box component="section" className="container" mt={11} id="experience">
-      <Typography fontWeight={500} fontSize={24}>
+      <Typography fontWeight={500} fontSize={24} mb={3}>
         Experience
       </Typography>
-      <Grid container spacing={2} mt={3}>
+      <Grid container spacing={2}>
         <Grid item lg={3} md={4} sm={6} xs={12}>
           <OpenCard />
         </Grid>

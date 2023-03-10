@@ -31,7 +31,7 @@ const experienceData = [
     id: "5",
     date: "01/2022 – 02/2023",
     company: "Itransition",
-    position: "Intern",
+    position: "Intern Front-End Developer",
     description: "Tasks of Full-stack web dev, programming web applications with stack MERN"
   },
 ];

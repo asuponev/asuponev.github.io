@@ -5,7 +5,7 @@ import photoImg from '../assets/photo.png';
 
 const About = () => {
   return (
-    <Box component="section" className="container" mt={20}>
+    <Box component="section" className="container" mt={20} id="about">
       <Stack
         direction={{ md: "row", sm: "column" }}
         alignItems={{ md: "flex-start", sm: "center", xs: "center" }}
