@@ -5,9 +5,9 @@ import skillsData from '../data/skills-data';
 
 const Skills = () => {
 
-  const skills = skillsData.map(skill => {
+  const skills = skillsData.map((skill, i) => {
     return (
-      <Typography>
+      <Typography key={i} sx={{ backgroundColor: "text.disabled", p: 2, borderRadius: 1 }}>
         {skill}
       </Typography>
     );
