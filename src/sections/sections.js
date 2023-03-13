@@ -5,6 +5,7 @@ import About from './about';
 import Experience from './experience';
 import Skills from './skills';
 import Education from './education';
+import Projects from './projects';
 
 const Sections = () => {
   return (
@@ -13,6 +14,7 @@ const Sections = () => {
       <Experience />
       <Skills />
       <Education />
+      <Projects />
     </Box>
   );
 }
