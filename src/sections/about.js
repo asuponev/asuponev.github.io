@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Stack, Link, Typography } from '@mui/material';
 
-import photoImg from '../assets/photo.png';
+import photoImg from '../assets/img/photo.png';
 
 const About = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '@mui/material';
 
-import logoUrl from '../../../assets/logo.svg';
+import logoUrl from '../../../assets/icon/logo.svg';
 
 export const Logo = () => {
   return (
