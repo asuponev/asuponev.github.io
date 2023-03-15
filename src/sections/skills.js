@@ -7,7 +7,7 @@ const Skills = () => {
 
   const skills = skillsData.map((skill, i) => {
     return (
-      <Typography key={i} sx={{ backgroundColor: "text.disabled", p: 2, borderRadius: 1 }}>
+      <Typography key={i} sx={{ backgroundColor: "background.skills", p: 2, borderRadius: 1 }}>
         {skill}
       </Typography>
     );

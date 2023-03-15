@@ -8,7 +8,7 @@ export const Nav = () => {
     <List>
       {navItems.map((item) => (
         <ListItem key={item} disablePadding>
-          <Link href={`#${item.toLowerCase()}`} color="primary" underline="hover">
+          <Link href={`#${item.toLowerCase()}`} underline="hover">
             <ListItemText primary={item} />
           </Link>
         </ListItem>

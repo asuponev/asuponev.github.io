@@ -3,7 +3,7 @@ import { Card, CardContent, Stack, Typography } from '@mui/material';
 
 const InfoCard = ({ date, company, position, description }) => {
   return (
-    <Card>
+    <Card sx={{ backgroundColor: "background.card" }}>
       <CardContent sx={{ display: "flex", flexDirection: "column", gap: 1, height: 200 }}>
         <Stack direction="row" justifyContent="space-between">
           <Typography color="text.secondary">

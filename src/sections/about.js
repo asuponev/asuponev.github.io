@@ -37,14 +37,14 @@ const About = () => {
           <Typography color="text.secondary" mb={3}>
             Located in Georgia<br />Batumi
           </Typography>
-          <Link href="https://t.me/andrewsupo" underline="hover">
+          <Link href="https://t.me/andrewsupo" underline="hover" color="link.color">
             Telegram
           </Link>
-          <Link href="https://github.com/elsuppo" underline="hover">
-            GitHub
-          </Link>
-          <Link href="mailto:andrew.suponev@gmail.com" underline="hover">
+          <Link href="mailto:andrew.suponev@gmail.com" underline="hover" color="link.color">
             Send email
+          </Link>
+          <Link href="https://github.com/elsuppo" underline="hover" color="link.color">
+            GitHub
           </Link>
         </Stack>
       </Stack>

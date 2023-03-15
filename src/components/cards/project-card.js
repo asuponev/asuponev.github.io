@@ -24,7 +24,7 @@ const ProjectCard = ({ title, description, note, skills, cover, link }) => {
           {skills}
         </Typography>
         <Stack direction="row" mt="auto">
-          <Link href={link} underline="hover">
+          <Link href={link} underline="hover" color="link.color">
             Code on GitHub
             <OpenInNewOutlinedIcon />
           </Link>

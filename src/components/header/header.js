@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <Box component="header" className="header">
+    <Box component="header" className="header" sx={{backgroundColor: "background.header"}}>
       <Box className="container">
         <Box className="header__inner">
           <IconButton
