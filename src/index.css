@@ -12,3 +12,15 @@
   margin: 0 auto;
   padding: 0 40px;
 }
+
+@media (max-width: 899px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 599px) {
+  .container {
+    padding: 0 16px;
+  }
+}
