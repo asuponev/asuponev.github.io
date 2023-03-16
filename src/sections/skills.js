@@ -14,7 +14,7 @@ const Skills = () => {
   });
 
   return (
-    <Box component="section" className="container" mt={11} id="skills">
+    <Box component="section" className="container" pt={11} id="skills">
       <Typography fontWeight={500} fontSize={24} mb={3}>
         Skills
       </Typography>

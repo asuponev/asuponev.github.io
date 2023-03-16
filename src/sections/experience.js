@@ -16,7 +16,7 @@ const Experience = () => {
   });
 
   return (
-    <Box component="section" className="container" mt={11} id="experience">
+    <Box component="section" className="container" pt={11} id="experience">
       <Typography fontWeight={500} fontSize={24} mb={3}>
         Experience
       </Typography>

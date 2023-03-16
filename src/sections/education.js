@@ -15,7 +15,7 @@ const Education = () => {
   });
 
   return (
-    <Box component="section" className="container" mt={11} id="education">
+    <Box component="section" className="container" pt={11} id="education">
       <Typography fontWeight={500} fontSize={24} mb={3}>
         Education
       </Typography>
