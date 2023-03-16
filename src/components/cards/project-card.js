@@ -25,13 +25,16 @@ const ProjectCard = ({ title, description, note, skills, cover, link }) => {
         <Box sx={{ height: 88 }}>
           <SkillItems skills={skills} />
         </Box>
-        <CardActions>
-          <Link href={link} underline="hover" color="link.color">
-            Code on GitHub
-            <OpenInNewOutlinedIcon />
-          </Link>
-        </CardActions>
       </CardContent>
+      <CardActions sx={{ p: 2, alignItems: "center" }}>
+        <Link
+          href={link} underline="hover" color="link.color"
+          sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+        >
+          Code on GitHub
+          <OpenInNewOutlinedIcon sx={{ height: 18, width: 18 }} />
+        </Link>
+      </CardActions>
     </Card>
   );
 }
