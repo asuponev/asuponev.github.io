@@ -1,6 +1,8 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Link, Typography, Stack } from '@mui/material';
+import { Card, CardMedia, CardContent, CardActions, Link, Typography, Box } from '@mui/material';
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
+
+import SkillItems from './skill-items';
 
 const ProjectCard = ({ title, description, note, skills, cover, link }) => {
   return (
@@ -10,25 +12,25 @@ const ProjectCard = ({ title, description, note, skills, cover, link }) => {
         image={cover}
         title={title}
       />
-      <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2, height: 300 }}>
-        <Typography fontWeight={700}>
+      <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+        <Typography fontSize={20} fontWeight={700}>
           {title}
         </Typography>
-        <Typography >
+        <Typography sx={{ height: 72 }}>
           {description}
         </Typography>
-        <Typography >
+        <Typography sx={{ height: 48 }}>
           {note}
         </Typography>
-        <Typography>
-          {skills}
-        </Typography>
-        <Stack direction="row" mt="auto">
+        <Box sx={{ height: 88 }}>
+          <SkillItems skills={skills} />
+        </Box>
+        <CardActions>
           <Link href={link} underline="hover" color="link.color">
             Code on GitHub
             <OpenInNewOutlinedIcon />
           </Link>
-        </Stack>
+        </CardActions>
       </CardContent>
     </Card>
   );
