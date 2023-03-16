@@ -37,4 +37,10 @@
     height: 32px;
     margin-left: auto;
   }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }

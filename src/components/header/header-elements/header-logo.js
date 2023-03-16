@@ -11,7 +11,7 @@ export const Logo = () => {
   const { mode } = useSelector(state => state.options);
 
   return (
-    <Link href="/">
+    <Link href="/" className="header__logo">
       <svg width="48" height="24" viewBox="0 0 48 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="3" cy="3" r="3" fill="#2F80ED" />
         <circle cx="3" cy="11" r="3" fill="#FFBAA4" />
