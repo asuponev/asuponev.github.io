@@ -4,7 +4,7 @@ const educationData = [
     date: "09/2012 – 06/2017",
     company: "University",
     position: "Transport construction engineer",
-    description: "Received higher education at St. Petersburg State Transport University (Diploma with honours)"
+    description: "Higher education at St. Petersburg State Transport University (cum laude)"
   },
   {
     id: "2",

@@ -16,7 +16,7 @@ const projectsData = [
   {
     id: "2",
     title: "Audio player",
-    description: "Music player that allows you to play music tracks in turn or flip through them by clicking on buttons. Each music track has a specific background image",
+    description: "Music player that allows you to play music tracks in turn or flip through them. Each music track has a specific background image",
     note: "Task from stage 0 of The Rolling Scopes School (2022)",
     skills: ["HTML", "CSS", "JavaScript"],
     cover: cover_audioplayer,

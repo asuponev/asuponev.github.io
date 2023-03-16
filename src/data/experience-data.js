@@ -4,14 +4,14 @@ const experienceData = [
     date: "01/2016 – 05/2018",
     company: "LenPSK",
     position: "Engineer",
-    description: "Designing of metal structures, drawing up of specifications, formation of design documentation"
+    description: "Designing of metal structures"
   },
   {
     id: "2",
     date: "09/2018 – 05/2019",
     company: "NTP",
     position: "Geodesist Engineer",
-    description: "Topographic survey of the site for the development of design and working documentation. Preparation of survey documentation"
+    description: "Topographic survey for design documentation"
   },
   {
     id: "3",
@@ -25,7 +25,7 @@ const experienceData = [
     date: "06/2021 – 01/2023",
     company: "NTP",
     position: "Chief Project Engineer",
-    description: "Design in the field of transport construction, design control, contractual work with customers and contractors"
+    description: "Design control, contractual work with customers and contractors"
   },
   {
     id: "5",
