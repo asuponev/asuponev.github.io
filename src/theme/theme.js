@@ -5,6 +5,7 @@ export const themeSettings = (mode) => {
       ...(mode === "dark"
         ? {
           primary: {
+            default: "#FFFFFF",
             main: "#FFFFFF",
           },
           background: {
@@ -20,7 +21,9 @@ export const themeSettings = (mode) => {
         }
         : {
           primary: {
+            default: "#000000",
             main: "#000000",
+            alt: "#192B45"
           },
           background: {
             default: "#FFFFFF",

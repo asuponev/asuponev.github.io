@@ -8,7 +8,6 @@ import { themeSettings } from './theme/theme';
 import Header from './components/header/header';
 import Sections from './sections/sections';
 import Footer from './components/footer/footer';
-import ThemeSwitcher from './components/theme-switcher/theme-switcher';
 
 const App = () => {
   const { mode } = useSelector(state => state.options);
@@ -17,7 +16,6 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <ThemeSwitcher />
       <Header />
       <Sections />
       <Footer />

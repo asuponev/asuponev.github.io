@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <Box component="header" className="header" sx={{backgroundColor: "background.header"}}>
+    <Box component="header" className="header" sx={{ backgroundColor: "background.header" }}>
       <Box className="container">
         <Box className="header__inner">
           <IconButton
@@ -29,6 +29,7 @@ const Header = () => {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Elements.Logo />
           </Box>
+          <Elements.ThemeSwitcher />
           <Box
             component="nav"
             className="header__desktop-menu"
