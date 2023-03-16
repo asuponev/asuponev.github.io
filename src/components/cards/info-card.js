@@ -4,19 +4,19 @@ import { Card, CardContent, Stack, Typography } from '@mui/material';
 const InfoCard = ({ date, company, position, description }) => {
   return (
     <Card sx={{ backgroundColor: "background.card" }}>
-      <CardContent sx={{ display: "flex", flexDirection: "column", gap: 1, height: 200 }}>
+      <CardContent sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
         <Stack direction="row" justifyContent="space-between">
           <Typography color="text.secondary">
             {date}
           </Typography>
-          <Typography >
+          <Typography>
             {company}
           </Typography>
         </Stack>
-        <Typography fontWeight={700}>
+        <Typography fontSize={20} fontWeight={700} minHeight={60}>
           {position}
         </Typography>
-        <Typography>
+        <Typography minHeight={72}>
           {description}
         </Typography>
       </CardContent>
