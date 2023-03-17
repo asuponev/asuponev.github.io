@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 import skillsData from '../data/skills-data';
 import SkillItems from '../components/cards/skill-items';
