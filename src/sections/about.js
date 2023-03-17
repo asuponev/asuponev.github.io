@@ -1,50 +1,60 @@
 import React from 'react';
 import { Box, Stack, Link, Typography } from '@mui/material';
 
-import photoImg from '../assets/img/photo.png';
+import aboutData from '../data/about-data';
+
+const optionsLink = {
+  target: "_blank",
+  rel: "noopener",
+  underline: "hover",
+  color: "link.color"
+}
 
 const About = () => {
+  const { fullName, position, description, photo, place, links } = aboutData;
+
   return (
     <Box component="section" className="container" pt={20} id="about">
       <Stack
         direction={{ md: "row", sm: "column" }}
-        alignItems={{ md: "flex-start", sm: "center", xs: "center" }}
+        alignItems={{ md: "flex-start", xs: "center" }}
         flexWrap="wrap"
       >
         <Box>
-          <img src={photoImg} alt="avatar" width={200} />
+          <img src={photo} alt="avatar" width={200} />
         </Box>
         <Stack
-          textAlign={{ md: "left", sm: "center", xs: "center" }}
-          mx={{ md: 3, sm: 0 }} my={{ md: 0, sm: 3, xs: 3 }}
+          textAlign={{ md: "left", xs: "center" }}
+          mx={{ md: 3, sm: 0 }} my={{ md: 0, xs: 3 }}
         >
           <Typography color="text.secondary">
-            Junior Front-End developer
+            {position}
           </Typography>
           <Typography fontWeight={700} fontSize={32}>
-            Andrew Suponev
+            {fullName}
           </Typography>
-          <Typography align="justify" maxWidth={410} mt={2}>
-            Since childhood I loved to stay up late and create websites using basic HTML and CSS.
-            But, unfortunately, after graduation, my life path and IT missed each other.
-            Now I'm 28 years old, I dream be a web developer and contribute to society by doing what I love.
+          <Typography sx={{ maxWidth: 410, mt: 2, textAlign: { md: "justify", xs: "center" } }}>
+            {description}
           </Typography>
         </Stack>
         <Stack
           ml={{ md: "auto", sm: 0 }}
-          textAlign={{ md: "left", sm: "center", xs: "center" }}
+          textAlign={{ md: "left", xs: "center" }}
         >
           <Typography color="text.secondary" mb={3}>
-            Located in Georgia<br />Batumi
+            Located in {place.country}<br />{place.city}
           </Typography>
-          <Link href="https://t.me/andrewsupo" underline="hover" color="link.color">
+          <Link href={links.telegram} {...optionsLink}>
             Telegram
           </Link>
-          <Link href="mailto:andrew.suponev@gmail.com" underline="hover" color="link.color">
+          <Link href={`mailto:${links.email}`} {...optionsLink}>
             Send email
           </Link>
-          <Link href="https://github.com/elsuppo" underline="hover" color="link.color">
+          <Link href={links.github} {...optionsLink}>
             GitHub
+          </Link>
+          <Link href={links.codewars} {...optionsLink}>
+            Codewars
           </Link>
         </Stack>
       </Stack>
