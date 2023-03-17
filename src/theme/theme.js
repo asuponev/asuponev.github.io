@@ -36,6 +36,9 @@ export const themeSettings = (mode) => {
             color: "#2F80ED",
           },
         }),
+    },
+    typography: {
+      fontFamily: `"Inter", "Roboto", "Arial", sans-serif`,
     }
   };
 };
