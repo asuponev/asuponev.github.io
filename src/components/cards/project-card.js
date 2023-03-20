@@ -3,6 +3,7 @@ import { Card, CardMedia, CardContent, CardActions, Link, Typography, Box } from
 import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 
 import SkillItems from './skill-items';
+import { linkOptions } from '../../shared/link-options';
 
 const ProjectCard = ({ title, description, note, skills, cover, link }) => {
   return (
@@ -28,7 +29,7 @@ const ProjectCard = ({ title, description, note, skills, cover, link }) => {
       </CardContent>
       <CardActions sx={{ p: 2, alignItems: "center" }}>
         <Link
-          href={link} underline="hover" color="link.color"
+          href={link} {...linkOptions}
           sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
         >
           Code on GitHub

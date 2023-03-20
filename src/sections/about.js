@@ -2,13 +2,7 @@ import React from 'react';
 import { Box, Stack, Link, Typography } from '@mui/material';
 
 import aboutData from '../data/about-data';
-
-const optionsLink = {
-  target: "_blank",
-  rel: "noopener",
-  underline: "hover",
-  color: "link.color"
-}
+import { linkOptions } from '../shared/link-options';
 
 const About = () => {
   const { fullName, position, description, photo, place, links } = aboutData;
@@ -44,16 +38,16 @@ const About = () => {
           <Typography color="text.secondary" mb={3}>
             Located in {place.country}<br />{place.city}
           </Typography>
-          <Link href={links.telegram} {...optionsLink}>
+          <Link href={links.telegram} {...linkOptions}>
             Telegram
           </Link>
-          <Link href={`mailto:${links.email}`} {...optionsLink}>
+          <Link href={`mailto:${links.email}`} {...linkOptions}>
             Send email
           </Link>
-          <Link href={links.github} {...optionsLink}>
+          <Link href={links.github} {...linkOptions}>
             GitHub
           </Link>
-          <Link href={links.codewars} {...optionsLink}>
+          <Link href={links.codewars} {...linkOptions}>
             Codewars
           </Link>
         </Stack>
