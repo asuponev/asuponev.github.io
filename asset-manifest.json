@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.7cac71a8.css",
-    "main.js": "/static/js/main.357ca56f.js",
-    "static/media/rss_stage_0.jpg": "/static/media/rss_stage_0.fc56702c66f010120e71.jpg",
-    "static/media/stepik_html-css.jpg": "/static/media/stepik_html-css.437dfd7b6f1a36ffa5da.jpg",
-    "static/media/stepik_python.jpg": "/static/media/stepik_python.0ea6ca499061344b5a6f.jpg",
-    "static/media/stepik_js.jpg": "/static/media/stepik_js.c6462c20e4d57f20b399.jpg",
-    "static/media/university.jpg": "/static/media/university.b297d9578d27f2510cb0.jpg",
-    "static/media/photo.png": "/static/media/photo.ab66c9213fd1dc33125c.png",
-    "static/media/cover_icollect.jpg": "/static/media/cover_icollect.19984148db743e411934.jpg",
-    "static/media/cover_portfolio-site.jpg": "/static/media/cover_portfolio-site.bb38d070bb84fc0cd94d.jpg",
-    "static/media/cover_audio-player.jpg": "/static/media/cover_audio-player.15e060088b19ed29f1aa.jpg",
-    "index.html": "/index.html",
-    "main.7cac71a8.css.map": "/static/css/main.7cac71a8.css.map",
-    "main.357ca56f.js.map": "/static/js/main.357ca56f.js.map"
+    "main.css": "/helloitsme/static/css/main.7cac71a8.css",
+    "main.js": "/helloitsme/static/js/main.f93e0cc2.js",
+    "static/media/rss_stage_0.jpg": "/helloitsme/static/media/rss_stage_0.fc56702c66f010120e71.jpg",
+    "static/media/stepik_html-css.jpg": "/helloitsme/static/media/stepik_html-css.437dfd7b6f1a36ffa5da.jpg",
+    "static/media/stepik_python.jpg": "/helloitsme/static/media/stepik_python.0ea6ca499061344b5a6f.jpg",
+    "static/media/stepik_js.jpg": "/helloitsme/static/media/stepik_js.c6462c20e4d57f20b399.jpg",
+    "static/media/university.jpg": "/helloitsme/static/media/university.b297d9578d27f2510cb0.jpg",
+    "static/media/photo.png": "/helloitsme/static/media/photo.ab66c9213fd1dc33125c.png",
+    "static/media/cover_icollect.jpg": "/helloitsme/static/media/cover_icollect.19984148db743e411934.jpg",
+    "static/media/cover_portfolio-site.jpg": "/helloitsme/static/media/cover_portfolio-site.bb38d070bb84fc0cd94d.jpg",
+    "static/media/cover_audio-player.jpg": "/helloitsme/static/media/cover_audio-player.15e060088b19ed29f1aa.jpg",
+    "index.html": "/helloitsme/index.html",
+    "main.7cac71a8.css.map": "/helloitsme/static/css/main.7cac71a8.css.map",
+    "main.f93e0cc2.js.map": "/helloitsme/static/js/main.f93e0cc2.js.map"
   },
   "entrypoints": [
     "static/css/main.7cac71a8.css",
-    "static/js/main.357ca56f.js"
+    "static/js/main.f93e0cc2.js"
   ]
 }
