@@ -1,6 +1,6 @@
 const skillsData = [
-  "HTML",
-  "CSS",
+  "HTML5",
+  "CSS3",
   "Figma",
   "JavaScript",
   "React JS",
