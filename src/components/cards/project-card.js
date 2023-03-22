@@ -5,7 +5,7 @@ import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined';
 import SkillItems from './skill-items';
 import { linkOptions } from '../../shared/link-options';
 
-const ProjectCard = ({ title, description, note, skills, cover, link }) => {
+const ProjectCard = ({ title, description, note, skills, cover, git, deploy }) => {
   return (
     <Card>
       <CardMedia
@@ -27,12 +27,19 @@ const ProjectCard = ({ title, description, note, skills, cover, link }) => {
           <SkillItems skills={skills} />
         </Box>
       </CardContent>
-      <CardActions sx={{ p: 2, alignItems: "center" }}>
+      <CardActions sx={{ p: 2, alignItems: "center", justifyContent: "space-between" }}>
         <Link
-          href={link} {...linkOptions}
+          href={git} {...linkOptions}
           sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
         >
           Code on GitHub
+          <OpenInNewOutlinedIcon sx={{ height: 18, width: 18 }} />
+        </Link>
+        <Link
+          href={deploy} {...linkOptions}
+          sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+        >
+          Live demo
           <OpenInNewOutlinedIcon sx={{ height: 18, width: 18 }} />
         </Link>
       </CardActions>
