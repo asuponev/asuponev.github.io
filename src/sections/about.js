@@ -15,7 +15,7 @@ const About = () => {
         flexWrap="wrap"
       >
         <Box>
-          <img src={photo} alt="avatar" width={200} />
+          <img src={photo} alt="avatar" width={200} height={200} style={{ borderRadius: 12 }} />
         </Box>
         <Stack
           textAlign={{ md: "left", xs: "center" }}
