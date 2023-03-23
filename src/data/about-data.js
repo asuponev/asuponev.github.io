@@ -10,6 +10,7 @@ const aboutData = {
     city: "Batumi"
   },
   links: {
+    linkedin: "https://www.linkedin.com/in/andrew-suponev/",
     telegram: "https://t.me/andrewsupo",
     email: "andrew.suponev@gmail.com",
     github: "https://github.com/elsuppo",

@@ -49,7 +49,7 @@ const projectsData = [
     id: "5",
     title: "iCollect",
     description: "Wep Application for managing personal collections",
-    note: "The term project as part of the internship",
+    note: "The coursework as part of the internship",
     skills: ["Node.js", "Express.js", "Mongo DB", "React", "Redux", "Material UI"],
     cover: cover_icollect,
     git: "https://github.com/elsuppo/iCollect",
