@@ -29,7 +29,7 @@ const experienceData = [
   },
   {
     id: "5",
-    date: "01/2022 – 02/2023",
+    date: "01/2023 – 03/2023",
     company: "Itransition",
     position: "Web Development Intern",
     description: "Full stack web development tasks. Coursework was done on MERN stack"
