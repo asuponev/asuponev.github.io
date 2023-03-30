@@ -8,7 +8,10 @@ const optionsSlice = createSlice({
   name: 'options',
   initialState,
   reducers: {
-    changeMode: state => { state.mode = state.mode === 'light' ? 'dark' : 'light' },
+    changeMode: state => {
+      state.mode = state.mode === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', state.mode);
+    },
   }
 });
 
