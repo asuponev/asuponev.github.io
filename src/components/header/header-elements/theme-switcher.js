@@ -4,7 +4,7 @@ import { IconButton, Stack, Tooltip } from '@mui/material';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 
-import { handleChangeMode } from '../../../store/action-creators/options';
+import { changeMode } from '../../../store/slices/options';
 
 export const ThemeSwitcher = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export const ThemeSwitcher = () => {
         }
       >
         <IconButton
-          onClick={() => dispatch(handleChangeMode(mode))}
+          onClick={() => dispatch(changeMode())}
           sx={{ color: "primary.alt", height: 32 }}
         >
           {
