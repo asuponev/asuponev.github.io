@@ -13,9 +13,9 @@ const About = () => {
   const { about, aboutLoadingStatus } = useSelector(state => state.data.about);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/data/about.json`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/about`)
       .then(res => res.json())
-      .then(data => dispatch(aboutFetched(data)))
+      .then(data => dispatch(aboutFetched(data[0])))
       .catch(() => dispatch(aboutFetchingError()))
   }, [dispatch]);
 

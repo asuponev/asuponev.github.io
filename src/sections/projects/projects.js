@@ -13,7 +13,7 @@ const Projects = () => {
   const { projects, projectsLoadingStatus } = useSelector(state => state.data.projects);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/data/projects.json`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/projects`)
       .then(res => res.json())
       .then(data => dispatch(projectsFetched(data)))
       .catch(() => dispatch(projectsFetchingError()))

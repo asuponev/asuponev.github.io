@@ -13,7 +13,7 @@ const Experience = () => {
   const { experience, experienceLoadingStatus } = useSelector(state => state.data.experience);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/data/experience.json`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/experience`)
       .then(res => res.json())
       .then(data => dispatch(experienceFetched(data)))
       .catch(() => dispatch(experienceFetchingError()))

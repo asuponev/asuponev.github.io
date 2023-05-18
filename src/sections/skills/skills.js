@@ -13,7 +13,7 @@ const Skills = () => {
   const { skills, skillsLoadingStatus } = useSelector(state => state.data.skills);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/data/skills.json`)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/skills`)
       .then(res => res.json())
       .then(data => dispatch(skillsFetched(data)))
       .catch(() => dispatch(skillsFetchingError()))
