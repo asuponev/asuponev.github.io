@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# PERSONAL WEBSITE
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This project was bootstrapped with [Nuxt 3](https://nuxt.com/docs/getting-started/introduction).
 
 ## Setup
 
@@ -61,3 +61,7 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Previous versions
+
+Previous version version of the site was made with React and is in [old-cra](https://github.com/elsuppo/elsuppo.github.io/tree/old-cra) branch.

@@ -6,6 +6,7 @@ export default <Partial<Config>>{
       sans: ['Inter', 'sans-serif'],
     },
   },
+  darkMode: 'class',
   plugins: [],
   content: [],
 }
