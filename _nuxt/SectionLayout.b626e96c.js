@@ -1,1 +1,0 @@
-import{j as e,h as s,X as o,o as c}from"./entry.8b7dca45.js";const n={},r={class:"mt-[120px] pb-10 pt-10 sm:pb-20 sm:pt-20"};function a(t,p){return c(),s("section",r,[o(t.$slots,"default")])}const l=e(n,[["render",a]]);export{l as default};
