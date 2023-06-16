@@ -32,7 +32,15 @@ export interface IExperience {
   description: string
 }
 
-export type ISkill = string
+interface SkillItem {
+  label: string
+  icon: string
+}
+
+export interface ISkill {
+  category: string
+  items: SkillItem[]
+}
 
 export interface IEducation {
   id: string
