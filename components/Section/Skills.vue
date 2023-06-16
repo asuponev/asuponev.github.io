@@ -20,7 +20,7 @@ defineProps<{ data: ISkill[] }>()
           <div
             v-for="skill in item.items"
             :key="skill.label"
-            class="custom-card group/item flex items-center justify-between p-2 text-gray-900 dark:text-gray-100 lg:relative lg:hover:bg-gray-200 lg:dark:hover:bg-gray-700"
+            class="custom-card group/item flex items-center justify-between p-2 lg:relative lg:hover:bg-gray-200 lg:dark:hover:bg-gray-700"
           >
             <span class="text-gray-900 dark:text-gray-100">
               {{ skill.label }}
