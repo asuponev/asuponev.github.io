@@ -20,23 +20,19 @@ const openModal = (item: IEducation): void => {
 
 <template>
   <SectionLayout>
-    <h2 class="mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
-      Education
-    </h2>
+    <h2 class="heading-h2">Education</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       <div
         v-for="item in [...data].reverse()"
         :key="item.id"
-        class="rounded-lg bg-gray-50 p-4 shadow-lg shadow-gray-200 dark:bg-gray-800 dark:shadow-gray-950"
+        class="custom-card p-4"
       >
         <div class="flex flex-col">
           <div class="flex justify-between">
             <p class="text-gray-500 dark:text-gray-400">{{ item.date }}</p>
             <p class="text-gray-900 dark:text-gray-100">{{ item.company }}</p>
           </div>
-          <h3
-            class="my-4 min-h-[60px] text-xl font-semibold text-gray-900 dark:text-gray-100"
-          >
+          <h3 class="heading-h3 my-4 min-h-[60px]">
             {{ item.position }}
           </h3>
           <p class="min-h-[72px] text-gray-800 dark:text-gray-200">
@@ -46,7 +42,7 @@ const openModal = (item: IEducation): void => {
         <div class="mt-4">
           <button
             type="button"
-            class="cursor-pointer font-semibold text-gray-900 transition-colors duration-200 hover:text-blue-400 focus:outline-none disabled:cursor-default disabled:opacity-50 disabled:hover:text-gray-900 dark:text-gray-100 dark:disabled:hover:text-gray-100"
+            class="cursor-pointer font-semibold text-gray-900 transition-colors duration-200 hover:text-blue-400 focus:outline-none disabled:cursor-default disabled:opacity-50 disabled:hover:text-gray-900 dark:text-gray-100 dark:hover:text-blue-600 dark:disabled:hover:text-gray-100"
             :disabled="item.certificate === 'none'"
             @click="openModal(item)"
           >

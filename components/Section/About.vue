@@ -20,22 +20,22 @@ defineProps<{ data: IAbout[] }>()
         />
       </div>
       <div
-        class="mx-0 my-3 flex flex-col text-center lg:mx-4 lg:my-0 lg:text-left"
+        class="mb-3 ml-0 mt-3 flex flex-col text-center lg:mb-0 lg:ml-4 lg:mt-0 lg:h-[200px] lg:text-left"
       >
         <p class="text-gray-500 dark:text-gray-400">{{ data[0].position }}</p>
-        <h1
-          class="mt-2 text-3xl font-semibold text-gray-900 dark:text-gray-100"
-        >
+        <h1 class="heading-h1 mt-2">
           {{ data[0].fullName }}
         </h1>
         <p
-          class="mt-4 max-w-[410px] text-center text-gray-800 dark:text-gray-200 lg:text-left"
+          class="mt-4 max-w-xl text-center text-gray-800 dark:text-gray-200 lg:mt-auto lg:text-left"
         >
           {{ data[0].description }}
         </p>
       </div>
-      <div class="ml-0 flex flex-col text-center lg:ml-auto lg:text-left">
-        <p class="mb-6 text-gray-500 dark:text-gray-400">
+      <div
+        class="ml-0 flex flex-col text-center lg:ml-auto lg:h-[200px] lg:text-left"
+      >
+        <p class="mb-2 mt-2 text-gray-500 dark:text-gray-400 lg:mb-0 lg:mt-0">
           Located in {{ data[0].place.country }}
           <br />
           {{ data[0].place.city }}
@@ -43,7 +43,7 @@ defineProps<{ data: IAbout[] }>()
         <a
           :href="data[0].links.linkedin"
           target="_blank"
-          class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
+          class="mt-auto text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Linkedin
         </a>

@@ -29,19 +29,17 @@ const { data: projects } = await useApi().getProjectsData<IProject[]>()
           as="template"
         >
           <button
-            class="w-full rounded-lg p-2 text-sm font-semibold text-gray-900 transition-shadow duration-200 focus:outline-none dark:text-gray-100"
+            class="flex w-full items-center justify-center rounded-lg p-2 text-sm font-semibold text-gray-900 transition-shadow duration-200 focus:outline-none dark:text-gray-100"
             :class="
               selected
                 ? 'shadow shadow-gray-200 dark:shadow-gray-800'
                 : 'hover:shadow hover:shadow-gray-200 dark:hover:shadow-gray-800'
             "
           >
-            <ClientOnly>
-              <Icon
-                :name="item.icon"
-                size="20"
-              />
-            </ClientOnly>
+            <Icon
+              :name="item.icon"
+              size="20"
+            />
             <span class="ml-1 hidden sm:inline-block">{{ item.label }}</span>
           </button>
         </HeadlessTab>

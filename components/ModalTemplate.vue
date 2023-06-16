@@ -50,9 +50,7 @@ const closeButtonRef = ref<HTMLButtonElement | null>(null)
               class="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 transition-all dark:bg-gray-900"
             >
               <div class="mb-4 flex items-center justify-between">
-                <h3
-                  class="text-xl font-semibold text-gray-900 dark:text-gray-100"
-                >
+                <h3 class="heading-h3">
                   {{ title }}
                 </h3>
                 <button

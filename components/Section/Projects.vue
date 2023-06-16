@@ -7,14 +7,12 @@ defineProps<{ data: IProject[] }>()
 
 <template>
   <SectionLayout>
-    <h2 class="mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
-      Projects
-    </h2>
+    <h2 class="heading-h2">Projects</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div
         v-for="item in [...data].reverse()"
         :key="item.id"
-        class="overflow-hidden rounded-lg bg-gray-50 shadow-lg shadow-gray-200 dark:bg-gray-800 dark:shadow-gray-950"
+        class="custom-card overflow-hidden"
       >
         <div class="h-[256px]">
           <img
@@ -23,10 +21,8 @@ defineProps<{ data: IProject[] }>()
             class="h-full w-full object-cover"
           />
         </div>
-        <div class="flex flex-col justify-between p-4">
-          <h3
-            class="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100"
-          >
+        <div class="flex h-[calc(100%-256px)] flex-col justify-between p-4">
+          <h3 class="heading-h3 mb-4">
             {{ item.title }}
           </h3>
           <p class="mb-4 h-[72px] text-gray-800 dark:text-gray-200">
@@ -39,7 +35,7 @@ defineProps<{ data: IProject[] }>()
             <div
               v-for="skill in item.skills"
               :key="skill"
-              class="mb-2 mr-2 grid place-items-center rounded-lg bg-gray-50 p-2 text-gray-900 shadow-md shadow-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:shadow-gray-900"
+              class="custom-card mb-2 mr-2 grid place-items-center p-2 text-gray-900 dark:text-gray-100"
             >
               {{ skill }}
             </div>

@@ -14,7 +14,7 @@ defineProps<{ data: ISkill[] }>()
       <div
         v-for="item in data"
         :key="item"
-        class="grid place-items-center rounded-lg bg-gray-50 p-2 text-gray-900 shadow-md shadow-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:shadow-gray-950"
+        class="custom-card grid place-items-center p-2 text-gray-900 dark:text-gray-100"
       >
         {{ item }}
       </div>
