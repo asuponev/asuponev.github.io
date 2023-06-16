@@ -22,6 +22,8 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   runtimeConfig: {
+    tgBbotToken: process.env.TG_BOT_TOKEN,
+    tgChatId: process.env.TG_CHAT_ID,
     public: {
       apiUrl: process.env.API_URL,
     },

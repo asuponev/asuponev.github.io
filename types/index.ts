@@ -61,3 +61,9 @@ export interface IProject {
   git: string
   deploy: string
 }
+
+export interface IFeedbackForm {
+  name: string
+  contact: string
+  message: string
+}

@@ -2,7 +2,10 @@
 const name = ref('')
 const contact = ref('')
 const message = ref('')
+
 const isLoading = ref(false)
+const isSuccess = ref(false)
+const isError = ref(false)
 
 const error = ref<{ type: string; message: string } | null>(null)
 
@@ -17,10 +20,14 @@ const getSavedValue = (value: string): string => {
   return localStorage.getItem(value)!
 }
 
-const clearStorage = () => {
+const clearForm = () => {
   localStorage.removeItem('form-feedback-name')
   localStorage.removeItem('form-feedback-contact')
   localStorage.removeItem('form-feedback-message')
+
+  name.value = ''
+  contact.value = ''
+  message.value = ''
 }
 
 onMounted(() => {
@@ -31,7 +38,7 @@ onMounted(() => {
   })
 })
 
-const submit = (): void => {
+const submit = async (): Promise<void> => {
   error.value = null
   isLoading.value = true
 
@@ -55,14 +62,32 @@ const submit = (): void => {
     }
   }
 
-  const body = {
+  const values = {
     name: name.value,
     contact: contact.value,
     message: message.value,
   }
 
-  console.log(body)
-  clearStorage()
+  if (!error.value) {
+    const { data } = await useFetch('/api/feedback', {
+      method: 'POST',
+      body: values,
+    })
+
+    if (data.value) {
+      isLoading.value = false
+      isSuccess.value = true
+      clearForm()
+    } else {
+      isLoading.value = false
+      isError.value = true
+    }
+
+    setTimeout(() => {
+      isSuccess.value = false
+      isError.value = false
+    }, 3000)
+  }
 }
 </script>
 
@@ -98,12 +123,19 @@ const submit = (): void => {
     <button
       :disabled="isLoading"
       type="submit"
-      class="mt-6 w-full rounded-full border-none bg-gray-100 p-1.5 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+      class="mt-6 h-10 w-full rounded-full border-none bg-gray-100 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
     >
-      <div v-if="!isLoading">Send</div>
+      <span v-if="!isLoading && !isSuccess && !isError">Send</span>
       <Icon
         v-else
-        name="eos-icons:loading"
+        :name="
+          isLoading
+            ? 'eos-icons:loading'
+            : isSuccess
+            ? 'material-symbols:done'
+            : 'material-symbols:error-outline'
+        "
+        :class="[{ 'text-green-500': isSuccess }, { 'text-red-500': isError }]"
         size="24"
       />
     </button>
