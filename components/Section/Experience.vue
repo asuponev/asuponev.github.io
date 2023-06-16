@@ -17,7 +17,7 @@ const openModal = (): void => {
 
 <template>
   <SectionLayout>
-    <h2 class="heading-h2">Experience</h2>
+    <h2 class="heading-h2 mb-6">Experience</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       <div
         class="relative flex min-h-[220px] items-center justify-center rounded-lg border border-dashed border-gray-200 bg-transparent p-4 dark:border-gray-700"
@@ -55,8 +55,9 @@ const openModal = (): void => {
     <ModalTemplate
       :isOpen="isOpen"
       :closeModal="closeModal"
+      title="Send me an offer"
     >
-      <FormFeedback class="pb-5 pt-5" />
+      <FormFeedback class="mb-5 mt-10" />
     </ModalTemplate>
   </SectionLayout>
 </template>

@@ -20,7 +20,7 @@ const openModal = (item: IEducation): void => {
 
 <template>
   <SectionLayout>
-    <h2 class="heading-h2">Education</h2>
+    <h2 class="heading-h2 mb-6">Education</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
       <div
         v-for="item in [...data].reverse()"

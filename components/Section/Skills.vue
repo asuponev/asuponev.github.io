@@ -7,7 +7,7 @@ defineProps<{ data: ISkill[] }>()
 
 <template>
   <SectionLayout>
-    <h2 class="heading-h2">Skills</h2>
+    <h2 class="heading-h2 mb-6">Skills</h2>
     <div>
       <div
         v-for="item in data"

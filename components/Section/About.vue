@@ -77,6 +77,11 @@ defineProps<{ data: IAbout[] }>()
         </a>
       </div>
     </div>
-    <FormFeedback class="mt-10 lg:mt-20" />
+    <div class="ml-auto mr-auto mt-10 max-w-xl lg:mt-20">
+      <h2 class="heading-h2 mb-6 text-center lg:text-left">
+        Send me a message
+      </h2>
+      <FormFeedback />
+    </div>
   </SectionLayout>
 </template>

@@ -7,7 +7,7 @@ defineProps<{ data: IProject[] }>()
 
 <template>
   <SectionLayout>
-    <h2 class="heading-h2">Projects</h2>
+    <h2 class="heading-h2 mb-6">Projects</h2>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <div
         v-for="item in [...data].reverse()"

@@ -50,19 +50,17 @@ const closeButtonRef = ref<HTMLButtonElement | null>(null)
               class="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 transition-all dark:bg-gray-900"
             >
               <div class="mb-4 flex items-center justify-between">
-                <h3 class="heading-h3">
-                  {{ title }}
-                </h3>
+                <h2 class="heading-h2">{{ title }}</h2>
                 <button
                   ref="closeButtonRef"
                   type="button"
-                  class="rounded-md bg-gray-50 p-1 text-sm focus:outline-none dark:bg-gray-800"
+                  class="rounded-md bg-gray-50 p-1 text-sm transition-colors duration-200 hover:bg-gray-200 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-700"
                   @click="closeModal"
                 >
                   <Icon
                     name="ph:x"
                     size="32"
-                    class="text-gray-900 transition-colors duration-200 hover:text-blue-400 dark:text-gray-100 dark:hover:text-blue-600"
+                    class="text-gray-900 transition-colors duration-200 dark:text-gray-100"
                   />
                 </button>
               </div>

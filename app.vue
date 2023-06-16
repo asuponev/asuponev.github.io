@@ -31,7 +31,7 @@ main {
 }
 
 .heading-h2 {
-  @apply mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-100;
+  @apply text-2xl font-semibold text-gray-900 dark:text-gray-100;
 }
 
 .heading-h3 {
