@@ -67,50 +67,45 @@ const submit = (): void => {
 </script>
 
 <template>
-  <div class="ml-auto mr-auto max-w-xl">
-    <h2 class="heading-h2 text-center lg:text-left">Send me a message</h2>
-    <ClientOnly>
-      <form @submit.prevent="submit()">
-        <FormInput
-          v-model:input="name"
-          name="name"
-          class="w-full"
-          placeholder="Your name"
-          :saveValue="saveValue"
-          :error="error && error.type == 'name' ? error.message : ''"
-        />
+  <form @submit.prevent="submit()">
+    <FormInput
+      v-model:input="name"
+      name="name"
+      class="w-full"
+      placeholder="Your name"
+      :saveValue="saveValue"
+      :error="error && error.type == 'name' ? error.message : ''"
+    />
 
-        <FormInput
-          v-model:input="contact"
-          name="contact"
-          class="mt-2 w-full"
-          placeholder="Contact (email / telegram / etc.)"
-          :saveValue="saveValue"
-          :error="error && error.type == 'contact' ? error.message : ''"
-        />
+    <FormInput
+      v-model:input="contact"
+      name="contact"
+      class="mt-2 w-full"
+      placeholder="Contact (email / telegram / etc.)"
+      :saveValue="saveValue"
+      :error="error && error.type == 'contact' ? error.message : ''"
+    />
 
-        <FormTextarea
-          v-model:input="message"
-          name="message"
-          class="mt-2 w-full"
-          placeholder="Your message"
-          :saveValue="saveValue"
-          :error="error && error.type == 'message' ? error.message : ''"
-        />
+    <FormTextarea
+      v-model:input="message"
+      name="message"
+      class="mt-2 w-full"
+      placeholder="Your message"
+      :saveValue="saveValue"
+      :error="error && error.type == 'message' ? error.message : ''"
+    />
 
-        <button
-          :disabled="isLoading"
-          type="submit"
-          class="mt-6 w-full rounded-full border-none bg-gray-100 p-1.5 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
-        >
-          <div v-if="!isLoading">Send</div>
-          <Icon
-            v-else
-            name="eos-icons:loading"
-            size="24"
-          />
-        </button>
-      </form>
-    </ClientOnly>
-  </div>
+    <button
+      :disabled="isLoading"
+      type="submit"
+      class="mt-6 w-full rounded-full border-none bg-gray-100 p-1.5 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+    >
+      <div v-if="!isLoading">Send</div>
+      <Icon
+        v-else
+        name="eos-icons:loading"
+        size="24"
+      />
+    </button>
+  </form>
 </template>
