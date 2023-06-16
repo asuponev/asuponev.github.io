@@ -8,7 +8,7 @@ defineProps<{ data: IAbout[] }>()
 <template>
   <SectionLayout>
     <div
-      class="flex flex-col flex-wrap items-center dark:bg-gray-900 lg:flex-row lg:items-start"
+      class="flex flex-col flex-wrap items-center lg:flex-row lg:items-start"
     >
       <div>
         <img
@@ -77,5 +77,6 @@ defineProps<{ data: IAbout[] }>()
         </a>
       </div>
     </div>
+    <FormFeedback class="mt-10 lg:mt-20" />
   </SectionLayout>
 </template>
