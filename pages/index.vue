@@ -46,35 +46,50 @@ const { data: projects } = await useApi().getProjectsData<IProject[]>()
       </div>
     </HeadlessTabList>
     <HeadlessTabPanels>
-      <HeadlessTabPanel v-if="about">
+      <HeadlessTabPanel
+        v-if="about"
+        class="outline-none"
+      >
         <SectionAbout :data="about" />
       </HeadlessTabPanel>
       <HeadlessTabPanel v-else>
         <SectionEmpty />
       </HeadlessTabPanel>
 
-      <HeadlessTabPanel v-if="experience">
+      <HeadlessTabPanel
+        v-if="experience"
+        class="outline-none"
+      >
         <SectionExperience :data="experience" />
       </HeadlessTabPanel>
       <HeadlessTabPanel v-else>
         <SectionEmpty />
       </HeadlessTabPanel>
 
-      <HeadlessTabPanel v-if="skills">
+      <HeadlessTabPanel
+        v-if="skills"
+        class="outline-none"
+      >
         <SectionSkills :data="skills" />
       </HeadlessTabPanel>
       <HeadlessTabPanel v-else>
         <SectionEmpty />
       </HeadlessTabPanel>
 
-      <HeadlessTabPanel v-if="education">
+      <HeadlessTabPanel
+        v-if="education"
+        class="outline-none"
+      >
         <SectionEducation :data="education" />
       </HeadlessTabPanel>
       <HeadlessTabPanel v-else>
         <SectionEmpty />
       </HeadlessTabPanel>
 
-      <HeadlessTabPanel v-if="projects">
+      <HeadlessTabPanel
+        v-if="projects"
+        class="outline-none"
+      >
         <SectionProjects :data="projects" />
       </HeadlessTabPanel>
       <HeadlessTabPanel v-else>
