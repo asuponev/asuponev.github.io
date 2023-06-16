@@ -19,7 +19,7 @@ const inputComputed = computed({
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col">
     <input
       v-model="inputComputed"
       :name="name"
@@ -32,7 +32,7 @@ const inputComputed = computed({
     />
     <span
       v-if="error"
-      class="text-sm font-semibold text-blue-500"
+      class="self-start text-sm font-semibold text-red-500"
     >
       {{ error }}
     </span>
