@@ -19,7 +19,7 @@ const { data: projects } = await useApi().getProjectsData<IProject[]>()
 <template>
   <HeadlessTabGroup>
     <HeadlessTabList
-      class="fixed left-0 top-16 flex h-14 w-full items-center bg-white dark:bg-gray-900"
+      class="fixed left-0 top-16 z-50 flex h-14 w-full items-center bg-white dark:bg-gray-900"
     >
       <div class="container grid grid-cols-5 gap-1">
         <HeadlessTab
