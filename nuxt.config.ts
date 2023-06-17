@@ -3,6 +3,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Andrew Suponev',
+      viewport:
+        'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0',
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         {
