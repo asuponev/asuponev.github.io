@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, IconButton } from '@mui/material';
+import { Box, IconButton, Link } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import * as Elements from './header-elements/header-elements';
@@ -16,6 +16,12 @@ const Header = () => {
   return (
     <Box component="header" className="header" sx={{ backgroundColor: "background.header" }}>
       <Box className="container">
+        <Box className="header__alert">
+          <span>NEW SITE VERSION</span>
+          <Link href="http://supo.netlify.app/" fontSize={12} underline="hover" color="link.color">
+            supo.netlify.app
+          </Link>
+        </Box>
         <Box className="header__inner">
           <IconButton
             color="inherit"

@@ -20,7 +20,7 @@ const About = () => {
   }, [dispatch]);
 
   return (
-    <Box component="section" className="container" pt={20} id="about">
+    <Box component="section" className="container" pt={29} id="about">
       {
         aboutLoadingStatus === 'loading' ? <Spinner />
           : aboutLoadingStatus === 'error' ? <ErrorMessage />
