@@ -36,12 +36,12 @@ const modules = [Pagination]
     :spaceBetween="20"
   >
     <div
-      class="container fixed left-0 top-16 z-40 grid h-14 w-full grid-cols-5 items-center gap-1 bg-white dark:bg-gray-900"
+      class="container fixed left-1/2 top-16 z-40 grid h-14 w-full translate-x-[-50%] grid-cols-5 items-center gap-1 bg-white dark:bg-gray-900"
     >
       <div
         v-for="item in tabItems"
         :key="item.label"
-        class="flex h-9 w-full items-center justify-center rounded-lg bg-white text-sm font-semibold text-gray-900 transition-shadow duration-200 hover:shadow focus:outline-none dark:bg-gray-900 dark:text-gray-100"
+        class="flex h-9 w-full items-center justify-center rounded-lg bg-white text-sm font-semibold text-gray-900 transition-shadow duration-200 focus:outline-none dark:bg-gray-900 dark:text-gray-100"
       >
         <Icon
           :name="item.icon"
@@ -96,7 +96,7 @@ const modules = [Pagination]
 
 <style>
 .swiper-pagination {
-  @apply fixed left-0 top-16 z-50 mx-auto grid h-14 w-full max-w-[1440px] grid-cols-5 items-center gap-1 px-5 !important;
+  @apply fixed left-1/2 top-16 z-50 mx-auto grid h-14 w-full max-w-[1440px] translate-x-[-50%] grid-cols-5 items-center gap-1 px-5 !important;
 }
 
 .swiper-pagination-bullet {
