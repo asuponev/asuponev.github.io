@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
 import { IAbout, IExperience, ISkill, IEducation, IProject } from '~/types'
 
 const tabItems = ref([
@@ -14,87 +18,92 @@ const { data: experience } = await useApi().getExperienceData<IExperience[]>()
 const { data: skills } = await useApi().getSkillsData<ISkill[]>()
 const { data: education } = await useApi().getEducationData<IEducation[]>()
 const { data: projects } = await useApi().getProjectsData<IProject[]>()
+
+const pagination = {
+  clickable: true,
+  renderBullet: (_index: number, className: string) => {
+    return `<span class="${className}"></span>`
+  },
+}
+const modules = [Pagination]
 </script>
 
 <template>
-  <HeadlessTabGroup>
-    <HeadlessTabList
-      class="fixed left-0 top-16 z-50 flex h-14 w-full items-center bg-white dark:bg-gray-900"
+  <Swiper
+    :modules="modules"
+    :pagination="pagination"
+    :autoHeight="true"
+    :spaceBetween="20"
+  >
+    <div
+      class="container fixed left-0 top-16 z-40 grid h-14 w-full grid-cols-5 items-center gap-1 bg-white dark:bg-gray-900"
     >
-      <div class="container grid grid-cols-5 gap-1">
-        <HeadlessTab
-          v-for="item in tabItems"
-          :key="item.label"
-          v-slot="{ selected }"
-          as="template"
-        >
-          <button
-            class="flex w-full items-center justify-center rounded-lg p-2 text-sm font-semibold text-gray-900 transition-shadow duration-200 focus:outline-none dark:text-gray-100"
-            :class="
-              selected
-                ? 'shadow shadow-gray-200 dark:shadow-gray-800'
-                : 'hover:shadow hover:shadow-gray-200 dark:hover:shadow-gray-800'
-            "
-          >
-            <Icon
-              :name="item.icon"
-              size="20"
-            />
-            <span class="ml-1 hidden sm:inline-block">{{ item.label }}</span>
-          </button>
-        </HeadlessTab>
-      </div>
-    </HeadlessTabList>
-    <HeadlessTabPanels>
-      <HeadlessTabPanel
+      <button
+        v-for="item in tabItems"
+        :key="item.label"
+        class="flex h-9 w-full items-center justify-center rounded-lg bg-white text-sm font-semibold text-gray-900 transition-shadow duration-200 hover:shadow hover:shadow-gray-200 focus:outline-none dark:bg-gray-900 dark:text-gray-100 dark:hover:shadow-gray-800"
+      >
+        <Icon
+          :name="item.icon"
+          size="20"
+        />
+        <span class="ml-1 hidden sm:inline-block">
+          {{ item.label }}
+        </span>
+      </button>
+    </div>
+    <SwiperSlide>
+      <SectionAbout
         v-if="about"
-        class="outline-none"
-      >
-        <SectionAbout :data="about" />
-      </HeadlessTabPanel>
-      <HeadlessTabPanel v-else>
-        <SectionEmpty />
-      </HeadlessTabPanel>
+        :data="about"
+      />
+      <SectionEmpty v-else />
+    </SwiperSlide>
 
-      <HeadlessTabPanel
+    <SwiperSlide>
+      <SectionExperience
         v-if="experience"
-        class="outline-none"
-      >
-        <SectionExperience :data="experience" />
-      </HeadlessTabPanel>
-      <HeadlessTabPanel v-else>
-        <SectionEmpty />
-      </HeadlessTabPanel>
+        :data="experience"
+      />
+      <SectionEmpty v-else />
+    </SwiperSlide>
 
-      <HeadlessTabPanel
+    <SwiperSlide>
+      <SectionSkills
         v-if="skills"
-        class="outline-none"
-      >
-        <SectionSkills :data="skills" />
-      </HeadlessTabPanel>
-      <HeadlessTabPanel v-else>
-        <SectionEmpty />
-      </HeadlessTabPanel>
+        :data="skills"
+      />
+      <SectionEmpty v-else />
+    </SwiperSlide>
 
-      <HeadlessTabPanel
+    <SwiperSlide>
+      <SectionEducation
         v-if="education"
-        class="outline-none"
-      >
-        <SectionEducation :data="education" />
-      </HeadlessTabPanel>
-      <HeadlessTabPanel v-else>
-        <SectionEmpty />
-      </HeadlessTabPanel>
+        :data="education"
+      />
+      <SectionEmpty v-else />
+    </SwiperSlide>
 
-      <HeadlessTabPanel
+    <SwiperSlide>
+      <SectionProjects
         v-if="projects"
-        class="outline-none"
-      >
-        <SectionProjects :data="projects" />
-      </HeadlessTabPanel>
-      <HeadlessTabPanel v-else>
-        <SectionEmpty />
-      </HeadlessTabPanel>
-    </HeadlessTabPanels>
-  </HeadlessTabGroup>
+        :data="projects"
+      />
+      <SectionEmpty v-else />
+    </SwiperSlide>
+  </Swiper>
 </template>
+
+<style>
+.swiper-pagination {
+  @apply fixed left-0 top-16 z-50 mx-auto grid h-14 w-full max-w-[1440px] grid-cols-5 items-center gap-1 px-5 !important;
+}
+
+.swiper-pagination-bullet {
+  @apply m-0 flex h-9 w-full items-center justify-center rounded-lg bg-transparent p-2 text-sm font-semibold text-gray-100 transition-shadow duration-200 hover:shadow hover:shadow-gray-200 focus:outline-none dark:text-gray-900 dark:hover:shadow-gray-800 !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply shadow shadow-gray-200 dark:shadow-gray-800 !important;
+}
+</style>
