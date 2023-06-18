@@ -20,7 +20,7 @@ defineProps<{ data: IAbout[] }>()
         />
       </div>
       <div
-        class="mb-3 ml-0 mt-3 flex flex-col text-center lg:mb-0 lg:ml-4 lg:mt-0 lg:h-[200px] lg:text-left"
+        class="my-3 ml-0 flex flex-col text-center lg:my-0 lg:ml-4 lg:h-[200px] lg:text-left"
       >
         <p class="text-gray-500 dark:text-gray-400">{{ data[0].position }}</p>
         <h1 class="heading-h1 mt-2">
@@ -35,7 +35,7 @@ defineProps<{ data: IAbout[] }>()
       <div
         class="ml-0 flex flex-col text-center lg:ml-auto lg:h-[200px] lg:text-left"
       >
-        <p class="mb-2 mt-2 text-gray-500 dark:text-gray-400 lg:mb-0 lg:mt-0">
+        <p class="my-2 text-gray-500 dark:text-gray-400 lg:my-0">
           Located in {{ data[0].place.country }}
           <br />
           {{ data[0].place.city }}

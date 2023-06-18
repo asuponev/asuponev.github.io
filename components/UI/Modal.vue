@@ -51,10 +51,9 @@ const closeButtonRef = ref<HTMLButtonElement | null>(null)
             >
               <div class="mb-4 flex items-center justify-between">
                 <h2 class="heading-h2">{{ title }}</h2>
-                <button
+                <UIButton
                   ref="closeButtonRef"
-                  type="button"
-                  class="rounded-md bg-gray-50 p-1 text-sm transition-colors duration-200 hover:bg-gray-200 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-700"
+                  class="p-1"
                   @click="closeModal"
                 >
                   <Icon
@@ -62,7 +61,7 @@ const closeButtonRef = ref<HTMLButtonElement | null>(null)
                     size="32"
                     class="text-gray-900 transition-colors duration-200 dark:text-gray-100"
                   />
-                </button>
+                </UIButton>
               </div>
               <slot />
             </HeadlessDialogPanel>

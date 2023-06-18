@@ -120,10 +120,10 @@ const submit = async (): Promise<void> => {
       :error="error && error.type == 'message' ? error.message : ''"
     />
 
-    <button
+    <UIButton
       :disabled="isLoading"
       type="submit"
-      class="mt-6 h-10 w-full rounded-full border-none bg-gray-100 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
+      class="mt-6 h-10 w-full"
     >
       <span v-if="!isLoading && !isSuccess && !isError">Send</span>
       <Icon
@@ -138,6 +138,6 @@ const submit = async (): Promise<void> => {
         :class="[{ 'text-green-500': isSuccess }, { 'text-red-500': isError }]"
         size="24"
       />
-    </button>
+    </UIButton>
   </form>
 </template>

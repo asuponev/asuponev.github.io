@@ -40,18 +40,17 @@ const openModal = (item: IEducation): void => {
           </p>
         </div>
         <div class="mt-4">
-          <button
-            type="button"
-            class="cursor-pointer font-semibold text-gray-900 transition-colors duration-200 hover:text-blue-400 focus:outline-none disabled:cursor-default disabled:opacity-50 disabled:hover:text-gray-900 dark:text-gray-100 dark:hover:text-blue-600 dark:disabled:hover:text-gray-100"
+          <UIButton
+            :secondary="true"
             :disabled="item.certificate === 'none'"
             @click="openModal(item)"
           >
             {{ item.certificate !== 'none' ? 'CERTIFICATE' : 'IN PROGRESS' }}
-          </button>
+          </UIButton>
         </div>
       </div>
     </div>
-    <ModalTemplate
+    <UIModal
       :isOpen="isOpen"
       :closeModal="closeModal"
       title="Certificate"
@@ -60,6 +59,6 @@ const openModal = (item: IEducation): void => {
         :src="currentCertificate"
         alt="certificate"
       />
-    </ModalTemplate>
+    </UIModal>
   </SectionLayout>
 </template>

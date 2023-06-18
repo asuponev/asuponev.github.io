@@ -38,10 +38,10 @@ const modules = [Pagination]
     <div
       class="container fixed left-0 top-16 z-40 grid h-14 w-full grid-cols-5 items-center gap-1 bg-white dark:bg-gray-900"
     >
-      <button
+      <div
         v-for="item in tabItems"
         :key="item.label"
-        class="flex h-9 w-full items-center justify-center rounded-lg bg-white text-sm font-semibold text-gray-900 transition-shadow duration-200 hover:shadow hover:shadow-gray-200 focus:outline-none dark:bg-gray-900 dark:text-gray-100 dark:hover:shadow-gray-800"
+        class="flex h-9 w-full items-center justify-center rounded-lg bg-white text-sm font-semibold text-gray-900 transition-shadow duration-200 hover:shadow focus:outline-none dark:bg-gray-900 dark:text-gray-100"
       >
         <Icon
           :name="item.icon"
@@ -50,7 +50,7 @@ const modules = [Pagination]
         <span class="ml-1 hidden sm:inline-block">
           {{ item.label }}
         </span>
-      </button>
+      </div>
     </div>
     <SwiperSlide>
       <SectionAbout
@@ -100,10 +100,10 @@ const modules = [Pagination]
 }
 
 .swiper-pagination-bullet {
-  @apply m-0 flex h-9 w-full items-center justify-center rounded-lg bg-transparent p-2 text-sm font-semibold text-gray-100 transition-shadow duration-200 hover:shadow hover:shadow-gray-200 focus:outline-none dark:text-gray-900 dark:hover:shadow-gray-800 !important;
+  @apply m-0 flex h-9 w-full items-center justify-center rounded-lg bg-transparent p-2 outline-none transition-shadow duration-200 hover:shadow hover:shadow-gray-400 focus:outline-none !important;
 }
 
 .swiper-pagination-bullet-active {
-  @apply shadow shadow-gray-200 dark:shadow-gray-800 !important;
+  @apply shadow shadow-gray-300 hover:shadow-gray-300 dark:shadow-gray-700 !important;
 }
 </style>

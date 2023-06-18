@@ -25,13 +25,12 @@ const openModal = (): void => {
         <span class="absolute left-4 top-4 text-gray-500 dark:text-gray-400">
           Open for collaboration
         </span>
-        <button
-          type="button"
-          class="cursor-pointer rounded-lg bg-gray-50 p-4 font-semibold text-gray-900 transition-colors duration-200 hover:bg-gray-200 focus:outline-none dark:bg-gray-800 dark:text-gray-100 lg:hover:bg-gray-200 lg:dark:hover:bg-gray-700"
-          @click="openModal()"
+        <UIButton
+          class="p-4"
+          :onClick="openModal"
         >
           DO YOU HAVE A OFFER?
-        </button>
+        </UIButton>
       </div>
       <div
         v-for="item in [...data].reverse()"
@@ -52,12 +51,12 @@ const openModal = (): void => {
         </div>
       </div>
     </div>
-    <ModalTemplate
+    <UIModal
       :isOpen="isOpen"
       :closeModal="closeModal"
       title="Send me an offer"
     >
       <FormFeedback class="mb-5 mt-10" />
-    </ModalTemplate>
+    </UIModal>
   </SectionLayout>
 </template>

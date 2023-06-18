@@ -23,7 +23,7 @@ main {
 }
 
 .container {
-  @apply ml-auto mr-auto max-w-[1440px] pl-5 pr-5;
+  @apply mx-auto max-w-[1440px] px-5;
 }
 
 .heading-h1 {
