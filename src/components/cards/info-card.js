@@ -16,7 +16,7 @@ const InfoCard = ({ date, company, position, description, certificate }) => {
             {date}
           </Typography>
           <Typography>
-            {company}
+            {company.name ? company.name : company}
           </Typography>
         </Stack>
         <Typography fontSize={20} fontWeight={700} minHeight={60}>
