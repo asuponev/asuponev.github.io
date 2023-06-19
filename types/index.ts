@@ -45,7 +45,10 @@ export interface ISkill {
 export interface IEducation {
   id: string
   date: string
-  company: string
+  company: {
+    name: string
+    link: string
+  }
   position: string
   description: string
   certificate: string

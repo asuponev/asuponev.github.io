@@ -29,8 +29,16 @@ const openModal = (item: IEducation): void => {
       >
         <div class="flex flex-col">
           <div class="flex justify-between">
-            <p class="text-gray-500 dark:text-gray-400">{{ item.date }}</p>
-            <p class="text-gray-900 dark:text-gray-100">{{ item.company }}</p>
+            <p class="text-gray-500 dark:text-gray-400">
+              {{ item.date }}
+            </p>
+            <NuxtLink
+              :to="item.company.link"
+              target="_blank"
+              class="text-gray-900 transition-colors duration-200 hover:text-blue-400 dark:text-gray-100 dark:hover:text-blue-600"
+            >
+              {{ item.company.name }}
+            </NuxtLink>
           </div>
           <h3 class="heading-h3 my-4 min-h-[60px]">
             {{ item.position }}
