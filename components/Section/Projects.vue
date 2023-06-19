@@ -41,20 +41,20 @@ defineProps<{ data: IProject[] }>()
             </div>
           </div>
           <div class="mt-4 flex items-center justify-between">
-            <a
-              :href="item.git"
+            <NuxtLink
+              :to="item.git"
               target="_blank"
               class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
             >
               Code on GitHub
-            </a>
-            <a
-              :href="item.deploy"
+            </NuxtLink>
+            <NuxtLink
+              :to="item.deploy"
               target="_blank"
               class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
             >
               Live demo
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>

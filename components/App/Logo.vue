@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <NuxtLink href="/">
+  <NuxtLink to="/">
     <svg
       width="48"
       height="24"

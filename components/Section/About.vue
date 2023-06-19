@@ -40,41 +40,41 @@ defineProps<{ data: IAbout[] }>()
           <br />
           {{ data[0].place.city }}
         </p>
-        <a
-          :href="data[0].links.linkedin"
+        <NuxtLink
+          :to="data[0].links.linkedin"
           target="_blank"
           class="mt-auto text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Linkedin
-        </a>
-        <a
-          :href="data[0].links.telegram"
+        </NuxtLink>
+        <NuxtLink
+          :to="data[0].links.telegram"
           target="_blank"
           class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Telegram
-        </a>
-        <a
-          :href="`mailto:${data[0].links.email}`"
+        </NuxtLink>
+        <NuxtLink
+          :to="`mailto:${data[0].links.email}`"
           target="_blank"
           class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Send email
-        </a>
-        <a
-          :href="data[0].links.github"
+        </NuxtLink>
+        <NuxtLink
+          :to="data[0].links.github"
           target="_blank"
           class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           GitHub
-        </a>
-        <a
-          :href="data[0].links.codewars"
+        </NuxtLink>
+        <NuxtLink
+          :to="data[0].links.codewars"
           target="_blank"
           class="text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Codewars
-        </a>
+        </NuxtLink>
       </div>
     </div>
     <div class="ml-auto mr-auto mt-10 max-w-xl lg:mt-20">

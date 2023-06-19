@@ -7,13 +7,13 @@
         <p class="text-xs text-gray-600 dark:text-gray-400">
           © 2023 Andrew Suponev. All rights reserved.
         </p>
-        <a
-          href="https://github.com/elsuppo"
+        <NuxtLink
+          to="https://github.com/elsuppo"
           target="_blank"
           class="text-xs text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
           Development
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </footer>
