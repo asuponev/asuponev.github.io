@@ -5,7 +5,7 @@
     <div class="container">
       <div class="flex items-center justify-between pb-6 pt-6">
         <p class="text-xs text-gray-600 dark:text-gray-400">
-          © 2023 Andrew Suponev. All rights reserved.
+          © {{ new Date().getFullYear() }} Andrew Suponev. All rights reserved.
         </p>
         <NuxtLink
           to="https://github.com/elsuppo"
