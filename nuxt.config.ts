@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
   colorMode: {
+    preference: 'dark',
     classSuffix: '',
   },
   runtimeConfig: {
