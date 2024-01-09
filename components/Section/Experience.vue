@@ -29,7 +29,7 @@ const openModal = (): void => {
           class="p-4"
           :onClick="openModal"
         >
-          DO YOU HAVE A OFFER?
+          DO YOU HAVE AN OFFER?
         </UIButton>
       </div>
       <div
