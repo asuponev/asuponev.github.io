@@ -8,7 +8,7 @@
           © {{ new Date().getFullYear() }} Andrew Suponev. All rights reserved.
         </p>
         <NuxtLink
-          to="https://github.com/elsuppo"
+          to="https://github.com/asuponev"
           target="_blank"
           class="text-xs text-blue-600 transition-colors duration-200 hover:text-blue-400"
         >
